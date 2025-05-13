@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estres Academico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', times new roman;
+      background: linear-gradient(to right, #e0f7fa, #171616);
+      color: #333;
+    }
+
+    header {
+      background: #d8db81;
+      color: black;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #c4c799;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+
+    nav button {
+      background: transparent;
+      border: none;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px 15px;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background: #d8dba4;
+      border-radius: 5px;
+    }
+
+    .slider-content {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #d8dba4;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+
+    .slide {
+      display: none;
+      padding: 30px;
+      animation: fade 0.5s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .slide h2 {
+      color: #212120;
+    }
+
+    .slide img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .slide ul {
+      padding-left: 20px;
+    }
+
+    .slide ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #cfe394;
+      color: black;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social-links img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid white;
+      transition: transform 0.3s;
+    }
+
+    .social-links a:hover img {
+      transform: scale(1.2);
+      border-color: #00e5ff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+   
+    <h1>Estres Academico</h1>
+    <light> <p><img src="WhatsApp Image 2025-02-20 at 21.28.19.jpeg" width="186" height="128"></p>
+   </light>
+    <p>Conoce sus causas, tipos y como superarlo</p>
+  </header>
+
+  <nav>
+    <button onClick="showSlide(0)">Inicio</button>
+    <button onClick="showSlide(1)">Problemas</button>
+    <button onClick="showSlide(2)">Tipos</button>
+    <button onClick="showSlide(3)">Soluciones</button>
+    <button onClick="showSlide(4)">Recomendaciones</button>
+  </nav>
+
+  <div class="slider-content">
+    <div class="slide active">
+      <h2>Bienvenido</h2>
+       "<img src="imagenes/estres2.jpg"> 
+      <p>El estres academico es una respuesta emocional y fisica provocada por las exigencias escolares. Aqui conoceras sus causas, efectos y como enfrentarlo de forma saludable.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Problemas causados por el Estres Academico</h2>
+      "<img src="imagenes/estres3.jpg">
+      <ul>
+        <li>Fatiga mental y fisica</li>
+        <li>Bajo rendimiento escolar</li>
+        <li>Ansiedad y depresion</li>
+        <li>Aislamiento social</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Tipos de Estres Academico</h2>
+      <img src="imagenes/estres5.jpg"> 
+      <ul>
+        <li><strong>Agudo:</strong> causado por eventos puntuales como examenes</li>
+        <li><strong>Cr�nico:</strong> se mantiene durante largos periodos</li>
+        <li><strong>Interno:</strong> autoexigencia y perfeccionismo</li>
+        <li><strong>Externo:</strong> presion de profesores o familiares</li>
+
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Soluciones</h2>
+      <img src="imagenes/estres6.jpg">
+      <ul>
+        <li>Planifica tu tiempo con un horario realista</li>
+        <li>Evita la multitarea excesiva</li>
+        <li>Consulta con profesionales educativos</li>
+        <li>Aplica tecnicas de estudio eficaces</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Recomendaciones</h2>
+      <img src="imagenes/estres7.png">
+      <ul>
+        <li>Duerme bien y manten una rutina estable</li>
+        <li>Haz ejercicio regularmente</li>
+        <li>Busca apoyo emocional en tu entorno</li>
+        <li>Practica respiracion profunda o meditacion</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Estres Academico | MELACAR </p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/sebastian.valencia.18847876" target="_blank"><img src="imagenes/facebook.png" width="250" height="249"> </a>
+      <a href="https://www.tiktok.com/@valencia.vc" target="_blank"><img src="imagenes/tik tok 1.jpg" width="736" height="736"> </a>
+      <a href="https://www.instagram.com/valencia_carlos4/" target="_blank"><img src="imagenes/instragram.jpg" width="225" height="225"> </a>    </div>
+  </footer>
+
+  <script>
+    function showSlide(index) {
+      const slides = document.querySelectorAll(".slide");
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+
